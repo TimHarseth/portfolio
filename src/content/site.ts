@@ -74,7 +74,7 @@ const repos = {
 };
 
 const skillItems = {
-  languages: ["C", "C++", "C#", "Go", "Kotlin", "Python", "JavaScript", "HTML & CSS", "SQL", "Haskell", "Rust", "GLSL", "Bash", "Solidity", "Dart"],
+  languages: ["C", "C++", "C#", "Go", "Kotlin", "Python", "JavaScript", "HTML & CSS", "SQL", "Haskell", "Rust", "GLSL", "Bash", "Solidity"],
   frameworks: [".NET / ASP.NET Core", "React", "Node.js & Express", "Android SDK", "OpenGL", "GLFW & GLM", "REST APIs"],
   infra: ["Docker & Docker Compose", "OpenStack", "Terraform", "Firebase", "GitHub Actions", "Linux", "Keycloak", "Prometheus", "Grafana"],
   databases: ["PostgreSQL", "MySQL / MariaDB"],
@@ -202,14 +202,14 @@ export const dictionaries: Record<Lang, Dictionary> = {
     langLabel: "Språk",
     hero: {
       location: "Trondheim, Norge",
-      tagline: "Masterstudent i informatikk med spesialisering i programvareutvikling",
+      tagline: "Masterstudent i informatikk med spesialisering i programvaresystemer",
       ctaProjects: "Se prosjekter",
       ctaContact: "Kontakt meg",
     },
     about: {
       heading: "Om meg",
       body: [
-        "Jeg tar en master i informatikk ved NTNU i Trondheim, med spesialisering i programvareutvikling. Før det fullførte jeg en bachelor i programmering ved NTNU i 2026.",
+        "Jeg tar en master i informatikk ved NTNU i Trondheim, med spesialisering i programvaresystemer. Før det fullførte jeg en bachelor i programmering ved NTNU i 2026.",
         "Det meste jeg har laget er backend og sky: REST-API-er i C# og Go, kjørt i Docker og satt i drift på OpenStack. Jeg har også skrevet 3D-grafikk i C++ og OpenGL, og Android-apper i Kotlin.",
         "Jeg ser etter internship og deltidsjobb som utvikler ved siden av studiene.",
       ],
@@ -266,7 +266,7 @@ export const dictionaries: Record<Lang, Dictionary> = {
     education: {
       heading: "Utdanning",
       master: {
-        title: "Master i informatikk, programvareutvikling",
+        title: "Master i informatikk, programvaresystemer",
         school: "NTNU, Trondheim",
         years: "2026–2028",
         status: "Pågår",

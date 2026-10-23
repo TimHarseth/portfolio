@@ -31,6 +31,7 @@ type SkillGroup = { name: string; items: string[] };
 export type Dictionary = {
   nav: { projects: string; education: string; skills: string; contact: string };
   langLabel: string;
+  theme: { toLight: string; toDark: string };
   hero: { location: string; tagline: string; ctaProjects: string; ctaContact: string };
   about: { heading: string; body: string[] };
   projects: {
@@ -85,6 +86,7 @@ export const dictionaries: Record<Lang, Dictionary> = {
   en: {
     nav: { projects: "Projects", education: "Education", skills: "Skills", contact: "Contact" },
     langLabel: "Language",
+    theme: { toLight: "Switch to light mode", toDark: "Switch to dark mode" },
     hero: {
       location: "Trondheim, Norway",
       tagline: "Master student in Informatics with a specialization in Software Engineering",
@@ -200,6 +202,7 @@ export const dictionaries: Record<Lang, Dictionary> = {
   no: {
     nav: { projects: "Prosjekter", education: "Utdanning", skills: "Ferdigheter", contact: "Kontakt" },
     langLabel: "Språk",
+    theme: { toLight: "Bytt til lyst tema", toDark: "Bytt til mørkt tema" },
     hero: {
       location: "Trondheim, Norge",
       tagline: "Masterstudent i informatikk med spesialisering i programvaresystemer",

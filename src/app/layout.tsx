@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Schibsted_Grotesk, Syne } from "next/font/google";
 import { LanguageProvider } from "@/lib/language";
+import { themeInitScript } from "@/lib/theme-script";
 import "./globals.css";
 
 const schibsted = Schibsted_Grotesk({
@@ -27,7 +28,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" data-scroll-behavior="smooth" className={`${schibsted.variable} ${geistMono.variable} ${syne.variable} antialiased`}>
+    <html
+      lang="en"
+      data-scroll-behavior="smooth"
+      suppressHydrationWarning
+      className={`${schibsted.variable} ${geistMono.variable} ${syne.variable} antialiased`}
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body className="min-h-screen font-sans">
         <LanguageProvider>{children}</LanguageProvider>
       </body>

@@ -1,13 +1,39 @@
 @import "tailwindcss";
 
+/* Dark is the default theme; light applies when <html data-theme="light">. */
+:root {
+  --ink: #000000;
+  --pine: #0f1e17;
+  --line: #22392d;
+  --sage: #93c9a4;
+  --sage-bright: #b4dcc0;
+  --text: #e6ebe7;
+  --muted: #98a69e;
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  --ink: #f7f9f7;
+  --pine: #e7efe9;
+  --line: #c9d8ce;
+  --sage: #2f6b4a;
+  --sage-bright: #245a3d;
+  --text: #0f1e17;
+  --muted: #4f6158;
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-pine: var(--pine);
+  --color-line: var(--line);
+  --color-sage: var(--sage);
+  --color-sage-bright: var(--sage-bright);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+}
+
 @theme {
-  --color-ink: #000000;
-  --color-pine: #0f1e17;
-  --color-line: #22392d;
-  --color-sage: #93c9a4;
-  --color-sage-bright: #b4dcc0;
-  --color-text: #e6ebe7;
-  --color-muted: #98a69e;
 
   --font-sans: var(--font-schibsted), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-geist-mono), ui-monospace, monospace;
@@ -26,22 +52,21 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
-  color-scheme: dark;
 }
 
 body {
-  background: var(--color-ink);
-  color: var(--color-text);
+  background: var(--ink);
+  color: var(--text);
   font-feature-settings: "kern", "liga";
 }
 
 ::selection {
-  background: var(--color-sage);
-  color: var(--color-ink);
+  background: var(--sage);
+  color: var(--ink);
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-sage);
+  outline: 2px solid var(--sage);
   outline-offset: 3px;
   border-radius: 2px;
 }

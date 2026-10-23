@@ -2,6 +2,7 @@
 
 import { languages } from "@/content/site";
 import { useLanguage } from "@/lib/language";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function Header() {
   const { lang, t, setLang } = useLanguage();
@@ -30,19 +31,22 @@ export function Header() {
               ))}
             </ul>
           </nav>
-          <div role="group" aria-label={t.langLabel} className="flex rounded-md border border-line p-0.5 text-sm">
-            {languages.map((code) => (
-              <button
-                key={code}
-                type="button"
-                onClick={() => setLang(code)}
-                aria-pressed={lang === code}
-                lang={code === "no" ? "nb" : "en"}
-                className="rounded px-2.5 py-1 font-display font-medium text-muted transition-colors hover:text-text aria-pressed:bg-sage aria-pressed:text-ink"
-              >
-                {code === "en" ? "EN" : "NO"}
-              </button>
-            ))}
+          <div className="flex items-center gap-2">
+            <div role="group" aria-label={t.langLabel} className="flex rounded-md border border-line p-0.5 text-sm">
+              {languages.map((code) => (
+                <button
+                  key={code}
+                  type="button"
+                  onClick={() => setLang(code)}
+                  aria-pressed={lang === code}
+                  lang={code === "no" ? "nb" : "en"}
+                  className="rounded px-2.5 py-1 font-display font-medium text-muted transition-colors hover:text-text aria-pressed:bg-sage aria-pressed:text-ink"
+                >
+                  {code === "en" ? "EN" : "NO"}
+                </button>
+              ))}
+            </div>
+            <ThemeToggle />
           </div>
         </div>
       </div>

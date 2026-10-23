@@ -30,7 +30,7 @@ export function Contact() {
       <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-3">
         <a
           href={`mailto:${contact.email}`}
-          className="text-[clamp(1.75rem,6vw,3rem)] font-bold tracking-tight text-text underline decoration-sage/50 decoration-2 underline-offset-[0.18em] transition-colors hover:decoration-sage"
+          className="font-display text-[clamp(1.5rem,6vw,2.75rem)] font-bold tracking-tight text-text underline decoration-sage/50 decoration-2 underline-offset-[0.18em] transition-colors hover:decoration-sage"
         >
           {contact.email}
         </a>

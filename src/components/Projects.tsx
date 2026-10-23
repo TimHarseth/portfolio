@@ -42,7 +42,7 @@ export function Projects() {
 
 function ProjectMeta({ kind, year }: { kind: string; year: string }) {
   return (
-    <p className="flex gap-3 text-sm">
+    <p className="flex gap-3 font-display text-sm">
       <span className="font-medium text-sage">{kind}</span>
       <span className="text-muted">{year}</span>
     </p>

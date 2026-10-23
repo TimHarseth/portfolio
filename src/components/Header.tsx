@@ -15,7 +15,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-10 border-b border-line bg-ink/90 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-6 px-4 sm:px-8">
-        <a href="#top" className="font-semibold tracking-tight text-text">
+        <a href="#top" className="font-display font-semibold tracking-tight text-text">
           Tim Harseth
         </a>
         <div className="flex items-center gap-8">
@@ -38,7 +38,7 @@ export function Header() {
                 onClick={() => setLang(code)}
                 aria-pressed={lang === code}
                 lang={code === "no" ? "nb" : "en"}
-                className="rounded px-2.5 py-1 font-medium text-muted transition-colors hover:text-text aria-pressed:bg-sage aria-pressed:text-ink"
+                className="rounded px-2.5 py-1 font-display font-medium text-muted transition-colors hover:text-text aria-pressed:bg-sage aria-pressed:text-ink"
               >
                 {code === "en" ? "EN" : "NO"}
               </button>

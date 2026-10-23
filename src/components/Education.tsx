@@ -29,8 +29,8 @@ export function Education() {
                 {courses.map((course) => (
                   <tr key={course.code} className="border-t border-line">
                     <td className="px-4 py-3 sm:px-5">{course.name}</td>
-                    <td className="hidden px-4 py-3 text-sm text-muted tabular-nums sm:table-cell">{course.code}</td>
-                    <td className="px-4 py-3 text-right text-lg font-bold text-sage sm:px-5">{course.grade}</td>
+                    <td className="hidden px-4 py-3 font-display text-sm text-muted sm:table-cell">{course.code}</td>
+                    <td className="px-4 py-3 text-right font-display text-lg font-bold text-sage sm:px-5">{course.grade}</td>
                   </tr>
                 ))}
               </tbody>
@@ -60,7 +60,7 @@ function Degree({
     <div>
       <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
         <h3 className="text-2xl font-bold tracking-tight">{title}</h3>
-        <p className="text-muted tabular-nums">{years}</p>
+        <p className="font-display text-sm text-muted">{years}</p>
       </div>
       <p className="mt-1 flex flex-wrap gap-x-3 text-muted">
         <span>{school}</span>

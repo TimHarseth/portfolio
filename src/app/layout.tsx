@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist_Mono, Schibsted_Grotesk } from "next/font/google";
+import { Geist_Mono, Schibsted_Grotesk, Syne } from "next/font/google";
 import { LanguageProvider } from "@/lib/language";
 import "./globals.css";
 
@@ -13,6 +13,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const syne = Syne({
+  variable: "--font-syne",
+  subsets: ["latin"],
+  weight: "800",
+});
+
 export const metadata: Metadata = {
   title: "Tim Harseth",
   description:
@@ -21,7 +27,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" data-scroll-behavior="smooth" className={`${schibsted.variable} ${geistMono.variable} antialiased`}>
+    <html lang="en" data-scroll-behavior="smooth" className={`${schibsted.variable} ${geistMono.variable} ${syne.variable} antialiased`}>
       <body className="min-h-screen font-sans">
         <LanguageProvider>{children}</LanguageProvider>
       </body>

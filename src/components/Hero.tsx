@@ -8,7 +8,7 @@ export function Hero() {
   return (
     <section id="top" className="hero-rise flex min-h-[calc(100svh-4rem)] flex-col justify-center py-20">
       <p className="font-display text-sm text-muted sm:text-base">{t.hero.location}</p>
-      <h1 className="mt-4 text-[clamp(4.5rem,14vw,10.5rem)] leading-[0.88] font-bold tracking-[-0.02em] text-text">
+      <h1 className="mt-4 font-hero text-[clamp(2.75rem,13.5vw,10rem)] leading-[0.9] font-extrabold tracking-[-0.02em] text-text">
         Tim
         <br />
         Harseth

@@ -11,13 +11,16 @@
 
   --font-sans: var(--font-schibsted), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-geist-mono), ui-monospace, monospace;
+  --font-hero: var(--font-syne), ui-sans-serif, sans-serif;
 }
 
 /* Headings and short labels use Geist Mono; reading text stays in Schibsted Grotesk. */
-h1,
-h2,
-h3 {
-  font-family: var(--font-display);
+@layer base {
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+  }
 }
 
 html {

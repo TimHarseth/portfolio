@@ -1,0 +1,35 @@
+"use client";
+
+import { useLanguage } from "@/lib/language";
+
+export function Hero() {
+  const { t } = useLanguage();
+
+  return (
+    <section id="top" className="hero-rise flex min-h-[calc(100svh-4rem)] flex-col justify-center py-20">
+      <p className="text-base text-muted">{t.hero.location}</p>
+      <h1 className="mt-4 text-[clamp(4.5rem,14vw,10.5rem)] leading-[0.88] font-bold tracking-[-0.04em] text-text">
+        Tim
+        <br />
+        Harseth
+      </h1>
+      <p className="mt-8 max-w-[30ch] text-xl leading-snug text-text/85 sm:text-2xl md:text-[1.75rem]">
+        {t.hero.tagline}
+      </p>
+      <div className="mt-10 flex flex-wrap gap-3">
+        <a
+          href="#projects"
+          className="rounded-md bg-sage px-5 py-3 font-semibold text-ink transition-colors hover:bg-sage-bright"
+        >
+          {t.hero.ctaProjects}
+        </a>
+        <a
+          href="#contact"
+          className="rounded-md border border-line px-5 py-3 font-semibold text-text transition-colors hover:border-sage"
+        >
+          {t.hero.ctaContact}
+        </a>
+      </div>
+    </section>
+  );
+}
